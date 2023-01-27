@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2021-11-28T02:08:52 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LapUser2010043" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3aba803c-94ba-4e85-a6c7-5a3127456248">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="konekbengkel2010031.xml"/>
+	<parameter name="usernameawal" class="java.lang.String"/>
+	<parameter name="usernameakhir" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from login2010039 where username
+between  $P{usernameawal} and  $P{usernameakhir}]]>
+	</queryString>
+	<field name="username" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="password" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="lastlogin" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="320" height="30" uuid="bf265c92-0908-4d6b-9a2a-1fec834827c0"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENGKEL CHANDRA NI NGAB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="359" height="30" uuid="24424038-421a-4c91-bdec-4f957e9d4e94"/>
+				<textElement>
+					<font size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[JL.Padang-Painan Km 50 Kecematan Koto XI Tarusan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="202" y="10" width="150" height="30" uuid="bb679623-9475-4b15-b2ad-1ee968a8a41e"/>
+				<textElement>
+					<font size="20" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Laporan User]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-15" y="55" width="585" height="1" uuid="51b9166f-6d4e-4140-8cc9-20fa570c436d"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="30" uuid="0073f04c-5f83-420e-8146-a873b46441fc"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="0" width="95" height="30" uuid="f6f09d68-24d3-41c0-a865-99b696b6cc42"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="30" uuid="f99aff68-b280-453f-8723-497f936764b2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="30" uuid="6acd5b67-d283-43b0-b3d4-c57e4908f51b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="30" uuid="d181d227-ae48-4d88-aa16-307c6b9e1e93"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[lastlogin]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="30" width="590" height="1" uuid="0754d9b4-58ab-42e1-9340-1a6a26194e85"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="80" height="30" uuid="f6e28903-7659-441d-9a8f-f2d56a9751ec"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="12" width="90" height="30" uuid="04d07dcf-3c98-4b2d-a69d-f5c90a06e73f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="10" width="100" height="30" uuid="5e972e15-6a6b-43a0-83e6-d4b1e17b3ad1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="10" width="100" height="30" uuid="66bb23af-c72f-4a7a-8bbb-04680000858f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="10" width="100" height="30" uuid="08aea2c4-e2a9-4739-a575-fb30a0134fda"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastlogin}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-30" y="34" width="610" height="1" uuid="10cabf66-0418-463a-808b-d339ace2bd97"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="56" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
